@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JsonBase64.MainPage">
+
+    <StackLayout>
+       
+        <Label Text="Nombre"               />
+        <Entry Text="{Binding Name}"/>
+        <Label Text="Apellido 1"               />
+        <Entry Text="{Binding Ap1}"/>
+        <Label Text="Apellido 2"               />
+        <Entry Text="{Binding Ap2}"/>
+        <Label Text="Usuario"               />
+        <Entry Text="{Binding UserName}"/>
+        <Label Text="Contraseña"/>
+        <Entry Text="{Binding Password}" IsPassword="True"/>
+
+        <Button Text="Register" Command="{Binding RegisterCommand}"/>
+
+        <Label Text="{Binding JsonResult}"/>
+    </StackLayout>
+
+</ContentPage>

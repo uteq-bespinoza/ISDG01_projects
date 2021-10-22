@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App6.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout>
+       
+        <Label Text="LOGIN" FontSize="Title" Padding="30,10,30,10"/>
+
+        <Label Text="Usuario"
+               />
+        <Entry Text="{Binding UserName}"/>
+        <Label Text="Contraseña"/>
+        <Entry Text="{Binding Password}" IsPassword="True"/>
+
+        <Button Text="Login" Command="{Binding LoginCommand}"/>
+
+        <Label IsVisible="{Binding IsErrorLogin}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Usuario o contraseña incorrectos" TextColor="Red"></Span>
+                        <Span Text="X">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CloseAlertCommand}">
+                                </TapGestureRecognizer>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+            
+        </Label>
+
+
+    </StackLayout>
+
+</ContentPage>
